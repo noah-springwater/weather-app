@@ -6,11 +6,13 @@ var d3 = require('d3');
 
 app.use(logger('dev'));
 
+//API hidden
 var api_key = process.env.WEATHER_SECRET;
 
 app.set('port', (process.env.PORT || 3000));
 
 app.use(express.static(__dirname + '/public'));
+//sending response to index as home
 app.get('/', function (request, response) {
   response.render('public/index.html');
 });
